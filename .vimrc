@@ -1,5 +1,25 @@
+" map ii to leave insert mode
+imap ii <Esc>
+
+" map cursor keys to hjkl (due to using neo layout)
+nmap <Up> k
+nmap <Down> j
+nmap <Left> h
+nmap <Right> l
+
+" bind Ctrl+<movement> keys to move around the windows, instead of using Ctrl+w
+" + <movement>
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+
 " automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
+
+" set wildmode to do autocomplete with ex commands to show all completions
+" and complete to the longest full match part
+set wildmode=longest,list
 
 " better copy and paste
 set pastetoggle=<F2>
@@ -8,20 +28,8 @@ set clipboard=unnamed
 " remap map leader key
 let mapleader=","
 
-" bind Ctrl+<movement> keys to move around the windows, instead of using Ctrl+w
-" + <movement>
-" " Every unnecessary keystroke that can be saved is good for your health :)
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
-map <c-h> <c-w>h
-
 " map sort function to a key
 vnoremap <Leader>s :sort<CR>
-
-"easier moving of code blocks
-vnoremap < <gv "better intendation
-vnoremap > >gv "better intendation
 
 " color schema
 set t_Co=256
@@ -52,10 +60,14 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+" only use decimal number format
+set nrformats=
+
 " use pathogen to manage plugins
 execute pathogen#infect()
 
 " settings for vim-powerline
+" Always show statusline
 set laststatus=2
 
 " settings for ctrlp
@@ -77,16 +89,9 @@ map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
 " mkdir -p ~/.vim/ftplugin
 " wget -O ~/.vim/ftplugin/python_editing.vim
 " http://www.vim.org/scripts/download_script.php?src_id=5492
+" use <Leader>f to fold/unfold under cursor 
+" and <Leader>F to fold/unfold file
 set nofoldenable
-
-" map ii to leave insert mode
-imap ii <Esc>
-
-" map cursor keys to hjkl (due to using neo layout)
-nmap <Up> k
-nmap <Down> j
-nmap <Left> h
-nmap <Right> l
 
 " enable PEP8 checks
 let g:pep8_map='<leader>8'
