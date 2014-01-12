@@ -76,6 +76,8 @@ set wildignore+=*.pyc
 set wildignore+=*_build/*
 set wildignore+=*/coverage/*
 
+" settings for NERDTree
+map <Leader>nt :NERDTree<CR>
 
 " Settings for jedi-vim
 " cd ~/.vim/bundle
