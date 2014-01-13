@@ -108,4 +108,5 @@ let g:pep8_map='<leader>8'
 " automatic execution of pep8 check for python files
 "autocmd BufWritePost *.py call Flake8()
 
-
+" configuration for vim-notes
+let g:notes_directories = ['~/Dokumente/notes/']
