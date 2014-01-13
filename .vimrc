@@ -97,6 +97,6 @@ set nofoldenable
 let g:pep8_map='<leader>8'
 
 " automatic execution of pep8 check for python files
-autocmd BufWritePost *.py call Flake8()
+"autocmd BufWritePost *.py call Flake8()
 
 
