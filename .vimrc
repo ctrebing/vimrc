@@ -28,6 +28,13 @@ set clipboard=unnamed
 " remap map leader key
 let mapleader=","
 
+" key mappings for easier split window navigation
+" they adher to the neo cursor keys
+nnoremap <C-i> <C-w>h
+nnoremap <C-e> <C-w>l
+nnoremap <C-a> <C-w>j
+nnoremap <C-l> <C-w>k
+
 " map sort function to a key
 vnoremap <Leader>s :sort<CR>
 
@@ -76,6 +83,8 @@ set wildignore+=*.pyc
 set wildignore+=*_build/*
 set wildignore+=*/coverage/*
 
+" settings for NERDTree
+map <Leader>nt :NERDTree<CR>
 
 " Settings for jedi-vim
 " cd ~/.vim/bundle
