@@ -25,3 +25,6 @@
 [submodule "bundle/vim-misc"]
 	path = bundle/vim-misc
 	url = https://github.com/xolox/vim-misc.git
+[submodule "bundle/butane"]
+	path = bundle/butane
+	url = https://github.com/Soares/butane.vim.git
