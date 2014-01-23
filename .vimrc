@@ -70,6 +70,9 @@ set noswapfile
 " only use decimal number format
 set nrformats=
 
+" set location of tag file
+set tags=tags;/
+
 " use pathogen to manage plugins
 execute pathogen#infect()
 
@@ -92,7 +95,8 @@ map <Leader>nt :NERDTree<CR>
 let g:jedi#usages_command = "<leader>z"
 let g:jedi#popup_on_dot = 0
 let g:jedi#popup_select_first = 0
-map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
+let g:jedi#use_tabs_not_buffers = 0
+map <Leader>br Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
 
 " Python folding
 " mkdir -p ~/.vim/ftplugin
@@ -106,7 +110,15 @@ set nofoldenable
 let g:pep8_map='<leader>8'
 
 " automatic execution of pep8 check for python files
-"autocmd BufWritePost *.py call Flake8()
+" autocmd BufWritePost *.py call Flake8()
 
 " configuration for vim-notes
 let g:notes_directories = ['~/Dokumente/notes/']
+
+" settings for easier buffer handling
+noremap <leader>bd :Bclose<CR>      " Close the buffer.
+noremap <leader>bl :ls<CR>          " List buffers.
+noremap <leader>bn :bn<CR>          " Next buffer.
+noremap <leader>bp :bp<CR>          " Previous buffer.
+noremap <leader>bt :b#<CR>          " Toggle to most recently used buffer.
+noremap <leader>bx :Bclose!<CR>     " Close the buffer & discard changes.
