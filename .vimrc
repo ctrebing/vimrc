@@ -90,10 +90,6 @@ set wildignore+=*/coverage/*
 " settings for NERDTree
 map <Leader>nt :NERDTree<CR>
 
-" settings for Rope
-map <leader>j :RopeGotoDefinition<CR>
-map <leader>r :RopeRename<CR>
-
 " Python folding
 " mkdir -p ~/.vim/ftplugin
 " wget -O ~/.vim/ftplugin/python_editing.vim
@@ -102,22 +98,16 @@ map <leader>r :RopeRename<CR>
 " and <Leader>F to fold/unfold file
 set nofoldenable
 
-" enable PEP8 checks
-let g:pep8_map='<leader>8'
-
-" automatic execution of pep8 check for python files
-" autocmd BufWritePost *.py call Flake8()
-
 " configuration for vim-notes
 let g:notes_directories = ['~/Dokumente/notes/']
 
 " settings for easier buffer handling
-noremap <leader>bd :Bclose<CR>      " Close the buffer.
-noremap <leader>bl :ls<CR>          " List buffers.
-noremap <leader>bn :bn<CR>          " Next buffer.
-noremap <leader>bp :bp<CR>          " Previous buffer.
-noremap <leader>bt :b#<CR>          " Toggle to most recently used buffer.
-noremap <leader>bx :Bclose!<CR>     " Close the buffer & discard changes.
+noremap <leader>bd :Bclose<CR>
+noremap <leader>bl :ls<CR>
+noremap <leader>bn :bn<CR>
+noremap <leader>bp :bp<CR>
+noremap <leader>bt :b#<CR>
+noremap <leader>bx :Bclose!<CR>
 
 " Python-mode
 " Activate rope
@@ -142,7 +132,7 @@ let g:pymode_doc_key = 'K'
 let g:pymode_lint = 1
 let g:pymode_lint_checker = "pyflakes,pep8"
 " Auto check on save
-"let g:pymode_lint_write = 1
+let g:pymode_lint_write = 1
 
 " Support virtualenv
 let g:pymode_virtualenv = 1
