@@ -1,9 +1,6 @@
 [submodule "bundle/flake8"]
 	path = bundle/flake8
 	url = https://github.com/nvie/vim-flake8
-[submodule "bundle/jedi"]
-	path = bundle/jedi
-	url = https://github.com/davidhalter/jedi-vim
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim
@@ -28,3 +25,12 @@
 [submodule "bundle/butane"]
 	path = bundle/butane
 	url = https://github.com/Soares/butane.vim.git
+[submodule "bundle/ropevim"]
+	path = bundle/ropevim
+	url = https://github.com/sontek/rope-vim.git
+[submodule "bundle/ack"]
+	path = bundle/ack
+	url = https://github.com/mileszs/ack.vim.git
+[submodule "bundle/vim-pyunit"]
+	path = bundle/vim-pyunit
+	url = https://github.com/nvie/vim-pyunit.git
