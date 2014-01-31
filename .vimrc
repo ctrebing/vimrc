@@ -1,4 +1,4 @@
-" map ii to leave insert mode
+" remap Escape Key
 imap ii <Esc>
 
 " map cursor keys to hjkl (due to using neo layout)
@@ -125,7 +125,7 @@ noremap <leader>bx :Bclose!<CR>
 let g:pymode_rope = 1
 
 " Documentation
-let g:pymode_doc = 1
+let g:pymode_doc = 0
 let g:pymode_doc_key = 'K'
 
 "Linting
@@ -146,6 +146,9 @@ let g:pymode_syntax = 1
 let g:pymode_syntax_all = 1
 let g:pymode_syntax_indent_errors = g:pymode_syntax_all
 let g:pymode_syntax_space_errors = g:pymode_syntax_all
+
+" open found definitions in same buffer
+let g:pymode_rope_goto_definition_cmd = 'e'
 
 " Don't autofold code
 let g:pymode_folding = 0
