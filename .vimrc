@@ -126,13 +126,15 @@ let g:pymode_rope = 1
 
 " Documentation
 let g:pymode_doc = 0
-let g:pymode_doc_key = 'K'
+"let g:pymode_doc_key = 'K'
 
 "Linting
 let g:pymode_lint = 1
 let g:pymode_lint_checker = "pyflakes,pep8"
+let g:pymode_lint_cwindow = 1
+let g:pymode_lint_message = 1
 " Auto check on save
-let g:pymode_lint_write = 1
+let g:pymode_lint_write = 0
 
 " Support virtualenv
 let g:pymode_virtualenv = 1
@@ -152,3 +154,9 @@ let g:pymode_rope_goto_definition_cmd = 'e'
 
 " Don't autofold code
 let g:pymode_folding = 0
+
+" Don't autocomplete on dot
+let g:pymode_rope_complete_on_dot = 1
+
+" disable preview window for autocompletion
+set completeopt-=preview
