@@ -134,7 +134,10 @@ let g:pymode_lint_checker = "pyflakes,pep8"
 let g:pymode_lint_cwindow = 1
 let g:pymode_lint_message = 1
 " Auto check on save
-let g:pymode_lint_write = 0
+let g:pymode_lint_on_write = 1
+"skip errors and warnings
+"E.g. "E501,W002", "E2,W" (Skip all Warnings and Errors startswith E2) and etc 
+let g:pymode_lint_ignore = "E302,W"
 
 " Support virtualenv
 let g:pymode_virtualenv = 1
