@@ -7,12 +7,12 @@ nmap <Down> j
 nmap <Left> h
 nmap <Right> l
 
-" bind Ctrl+<movement> keys to move around the windows, instead of using Ctrl+w
-" + <movement>
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
-map <c-h> <c-w>h
+" key mappings for easier split window navigation
+" they adher to the neo cursor keys
+nnoremap <C-i> <C-w>h
+nnoremap <C-e> <C-w>l
+nnoremap <C-a> <C-w>j
+nnoremap <C-l> <C-w>k
 
 " automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
@@ -27,13 +27,6 @@ set clipboard=unnamed
 
 " remap map leader key
 let mapleader=","
-
-" key mappings for easier split window navigation
-" they adher to the neo cursor keys
-nnoremap <C-i> <C-w>h
-nnoremap <C-e> <C-w>l
-nnoremap <C-a> <C-w>j
-nnoremap <C-l> <C-w>k
 
 " map sort function to a key
 vnoremap <Leader>s :sort<CR>
@@ -100,6 +93,8 @@ set nofoldenable
 
 " configuration for vim-notes
 let g:notes_directories = ['~/Dokumente/notes/']
+let g:notes_suffix = '.txt'
+let g:notes_smart_quotes = 0
 
 " settings for easier buffer handling
 noremap <leader>bd :Bclose<CR>
@@ -137,7 +132,9 @@ let g:pymode_lint_message = 1
 let g:pymode_lint_on_write = 1
 "skip errors and warnings
 "E.g. "E501,W002", "E2,W" (Skip all Warnings and Errors startswith E2) and etc 
-let g:pymode_lint_ignore = "E302,W"
+"E501 line too long
+"E12{1,2,6,7,8} continuation line intendation errors
+let g:pymode_lint_ignore = "E501,E12"
 
 " Support virtualenv
 let g:pymode_virtualenv = 1
