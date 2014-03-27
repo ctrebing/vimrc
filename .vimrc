@@ -35,6 +35,13 @@ vnoremap <Leader>s :sort<CR>
 set t_Co=256
 color wombat256mod
 
+if &term =~ '256color'
+  " disable Background Color Erase (BCE) so that color schemes
+  " render properly when inside 256-color tmux and GNU screen.
+  " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
+  set t_ut=
+endif
+
 " enable syntax highlighting
 filetype off
 filetype plugin indent on
