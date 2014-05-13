@@ -1,5 +1,27 @@
 " remap Escape Key
-imap ii <Esc>
+inoremap <CR> <Esc>
+"   Initially, pressing Enter returns to normal mode.
+"   In insert mode, pressing Shift-Enter enters "multiline" mode, meaning
+"     that pressing Enter will insert a newline.
+"   In insert mode, after pressing Shift-Enter to enter "multiline"
+"     mode, pressing Shift-Enter again exits (returns Vto normal mode). 
+
+" more details: http://vim.wikia.com/wiki/Avoid_the_escape_key
+"function! ToggleEnterMapping()
+  "if empty(mapcheck('<CR>', 'i'))
+    "inoremap <CR> <Esc>`^
+    "return "\<Esc>"
+  "else
+    "iunmap <CR>
+    "return "\<CR>"
+  "endif
+"endfunction
+"call ToggleEnterMapping()
+"inoremap <expr> <C-CR> ToggleEnterMapping()
+" Optional (so <CR> cancels prefix, selection, operator).
+"nnoremap <CR> <Esc>
+"vnoremap <CR> <Esc>gV
+"onoremap <CR> <Esc>
 
 " map cursor keys to hjkl (due to using neo layout)
 nmap <Up> k
@@ -167,3 +189,4 @@ let g:pymode_rope_complete_on_dot = 1
 
 " disable preview window for autocompletion
 set completeopt-=preview
+
