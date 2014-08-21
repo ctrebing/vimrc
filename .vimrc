@@ -120,11 +120,6 @@ map <Leader>nt :NERDTree<CR>
 " and <Leader>F to fold/unfold file
 set nofoldenable
 
-" configuration for vim-notes
-let g:notes_directories = ['~/Dokumente/notes/']
-let g:notes_suffix = '.txt'
-let g:notes_smart_quotes = 0
-
 " settings for easier buffer handling
 noremap <leader>bd :Bclose<CR>
 noremap <leader>bl :ls<CR>
@@ -163,14 +158,14 @@ let g:pymode_lint_on_write = 1
 "E.g. "E501,W002", "E2,W" (Skip all Warnings and Errors startswith E2) and etc 
 "E501 line too long
 "E12{1,2,6,7,8} continuation line intendation errors
-let g:pymode_lint_ignore = "E501,E12"
+let g:pymode_lint_ignore = "E501,E502,E303,E12"
 
 " Support virtualenv
 let g:pymode_virtualenv = 1
 
 " Enable breakpoints plugin
 let g:pymode_breakpoint = 1
-let g:pymode_breakpoint_key = 'b'
+let g:pymode_breakpoint_key = 'p'
 
 " syntax highlighting
 let g:pymode_syntax = 1
@@ -185,8 +180,10 @@ let g:pymode_rope_goto_definition_cmd = 'e'
 let g:pymode_folding = 0
 
 " Don't autocomplete on dot
-let g:pymode_rope_complete_on_dot = 1
+let g:pymode_rope_complete_on_dot = 0
 
 " disable preview window for autocompletion
 set completeopt-=preview
 
+let g:PyUnitTestsRoot = "test"
+let g:PyUnitTestsStructure = "nose"
