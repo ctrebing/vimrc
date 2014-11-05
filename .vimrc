@@ -23,6 +23,10 @@ inoremap <CR> <Esc>
 "vnoremap <CR> <Esc>gV
 "onoremap <CR> <Esc>
 
+" command line abbreviation to open files in current directory
+" use :e %%/ will expand the current path and completion is possible
+cabbr <expr> %% expand('%:p:h') 
+
 " map cursor keys to hjkl (due to using neo layout)
 nmap <Up> k
 nmap <Down> j
@@ -121,12 +125,10 @@ map <Leader>nt :NERDTree<CR>
 set nofoldenable
 
 " settings for easier buffer handling
-noremap <leader>bd :Bclose<CR>
 noremap <leader>bl :ls<CR>
 noremap <leader>bn :bn<CR>
 noremap <leader>bp :bp<CR>
 noremap <leader>bt :b#<CR>
-noremap <leader>bx :Bclose!<CR>
 
 " Python-mode
 " Activate rope
@@ -184,6 +186,3 @@ let g:pymode_rope_complete_on_dot = 0
 
 " disable preview window for autocompletion
 set completeopt-=preview
-
-let g:PyUnitTestsRoot = "test"
-let g:PyUnitTestsStructure = "nose"
