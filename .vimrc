@@ -160,7 +160,7 @@ let g:pymode_lint_on_write = 1
 "E.g. "E501,W002", "E2,W" (Skip all Warnings and Errors startswith E2) and etc 
 "E501 line too long
 "E12{1,2,6,7,8} continuation line intendation errors
-let g:pymode_lint_ignore = "E501,E502,E303,E12"
+let g:pymode_lint_ignore = "E501,E502,E303,E12,E261,E262"
 
 " Support virtualenv
 let g:pymode_virtualenv = 1
