@@ -151,7 +151,7 @@ let g:pymode_doc = 0
 
 "Linting
 let g:pymode_lint = 1
-let g:pymode_lint_checker = "pyflakes,pep8"
+let g:pymode_lint_checkers = ['pyflakes', 'pep8']
 let g:pymode_lint_cwindow = 1
 let g:pymode_lint_message = 1
 " Auto check on save
